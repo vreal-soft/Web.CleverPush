@@ -1,16 +1,16 @@
 # Навигация
-- [Стак](#stak)
-- [Команды и начало работы](#start-work)
-- [Предустановленные пакеты](#pre-installed-packages)
-- [Структура проекта](#project-structure)
-    - [Actions](#Actions)
-    - [Components](#Components)
-    - [Containers](#Containers)
-    - [Sources](#Sources)
-    - [Store](#Store)
-    - [Utils](#Utils)
-- [Структура компонента](#component-structure)
-# Стак<a id="stak"></a>
+- [Стак](#стак)
+- [Команды и начало работы](#команды-и-начало-работы)
+- [Предустановленные пакеты](#предустановленные-пакеты)
+- [Структура проекта](#структура-проекта)
+    - [Actions](#actions)
+    - [Components](#components)
+    - [Containers](#containers)
+    - [Sources](#sources)
+    - [Store](#store)
+    - [Utils](#utils)
+- [Структура компонента](#структура-компонента)
+# Стак
 - Create React App boilerplate ([doc](https://github.com/facebook/create-react-app#create-react-app--))
 - React Router ([doc](https://reacttraining.com/react-router/web/example/basic))
 - React Redux ([doc](https://github.com/reduxjs/react-redux#react-redux))
@@ -18,7 +18,7 @@
 - Sass ([doc](https://sass-lang.com/guide))
 - Ant Design ([doc](https://ant.design/docs/react/introduce))
 
-# Команды и начало работы<a id="start-work"></a>
+# Команды и начало работы
 Перед началом работы создайте и заполните `.env` по примеру `.env.example`.
 
 Запуск локального сервера разработки (development)
@@ -28,7 +28,7 @@
 
 больше информации о командах можно найти [тут](https://github.com/facebook/create-react-app#npm-start-or-yarn-start).
 
-# Предустановленные пакеты<a id="pre-installed-packages"></a>
+# Предустановленные пакеты
 - prop-types ([doc](https://www.npmjs.com/package/prop-types))
 - moment ([doc](https://www.npmjs.com/package/moment))
 - lodash ([doc](https://www.npmjs.com/package/lodash))
@@ -39,15 +39,15 @@
 Это необходимые пакеты большинство из котрых присутвуют во всех наших проектах.
 # Структура проекта<a id="project-structure"></a>
 ![](https://drive.google.com/uc?authuser=0&id=1XHFIhmgtzXcAdWgxfoGj1JsLIKDQuWky&export=download)
-- [src/actions](#Actions)
-- [src/components](#Components)
-- [src/components/PrivateRoute](#srccomponentsPrivateRoute)
-- [src/containers](#Containers)
-- [src/containers/Public/App/index.jsx](#srccontainersPublicAppindexjsx)
-- [src/sources](#Sources)
+- [src/actions](#actions)
+- [src/components](#components)
+- [src/components/PrivateRoute](#srccomponentsprivateroute)
+- [src/containers](#containers)
+- [src/containers/Public/App/index.jsx](#srccontainerspublicappindexjsx)
+- [src/sources](#sources)
 - [src/sources/styles/styles.scss](#srcsourcesstylesstylesscss)
 - [src/sources/styles/variables.scss](#srcsourcesstylesvariablesscss)
-- [src/utils](#Utils)
+- [src/utils](#utils)
 - [src/config.js](#srcconfigjs)
 - [src/index.js](#srcindexjs)
 - [.env.example](#envexample)

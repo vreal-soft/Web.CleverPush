@@ -68,8 +68,8 @@ import { api } from '../config'
 // import store for interact with redux
 import store from '../store'
 // import action types
-import { actionTypes as usersActionTypes } from '../store/reducers/users'
-import { actionTypes as userActionTypes } from '../store/reducers/user'
+import { actionTypes as usersActionTypes } from 'store/reducers/users'
+import { actionTypes as userActionTypes } from 'store/reducers/user'
 
 // common http request
 export async function getUser(id = 1) {
@@ -115,7 +115,7 @@ export function setUser(user) {
 
 Если приложение имеет авторизацию, необходимо получить данные о текущем пользователе перед отображением роутера дабы избежать несвоевременных редиректов.
 ##### Sources
-Предназначена для шрифтов, картинок, стилей и другого медиа контента.
+Предназначена для шрифтов, картинок, стилей и другого медиа контента, которые должны находиться только в этой папке (по компонентам не раскидывать) 
 ###### `src/sources/styles/styles.scss`
 Предназначин для разметки каркаса приложения, общих стилей приложения таких как определение шрифта, его размера, цвета фона и так далее.
 ###### `src/sources/styles/variables.scss`
@@ -196,16 +196,16 @@ import React, { Component } from 'react'
 import { notification, message, Icon, PageHeader } from 'antd'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
-import history from '../../../utils/history'
+import history from 'utils/history'
 
 // actions
-import * as usersActions from '../../../actions/users'
-import * as postsActions from '../../../actions/posts'
-import * as commentsActions from '../../../actions/comments'
+import * as usersActions from 'actions/users'
+import * as postsActions from 'actions/posts'
+import * as commentsActions from 'actions/comments'
 
 // styles and images
 import styles from './styles.module.scss'
-import logo from '../../../sources/images/logo.png'
+import logo from 'sources/images/logo.png'
 
 // define constants
 const initState = { foo: 'bar' }
@@ -329,11 +329,10 @@ export default withRouter(
 export const postsSelector = (state) => state.deep.chain.posts.list
 
 // component
-import { postsSelector } from '../../../store/reducers/posts'
+import { postsSelector } from 'store/reducers/posts'
 
 export default connect(state => ({
     user: postsSelector(state),
     posts: state.posts,
 }))(SomeComponent)
 ```
-

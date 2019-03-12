@@ -3,7 +3,7 @@ import { Layout, Icon, Button, Avatar } from 'antd'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
-import * as usersActions from '../../actions/users'
+import * as usersActions from 'actions/users'
 
 import styles from './styles.module.scss'
 

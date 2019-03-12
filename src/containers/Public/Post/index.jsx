@@ -2,13 +2,13 @@
 import React, { Component } from 'react'
 import { notification, Icon, message, PageHeader, Row, Col, Skeleton, Rate, Comment, Tooltip, List, Avatar } from 'antd'
 import { Link } from 'react-router-dom'
-import history from '../../../utils/history'
+import history from 'utils/history'
 import moment from 'moment'
 
 // actions
-import * as usersActions from '../../../actions/users'
-import * as postsActions from '../../../actions/posts'
-import * as commentsActions from '../../../actions/comments'
+import * as usersActions from 'actions/users'
+import * as postsActions from 'actions/posts'
+import * as commentsActions from 'actions/comments'
 
 // styles and images
 import styles from './styles.module.scss'

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { notification, Icon, Empty, Button, Input, Row, Col, message } from 'antd'
 import PostCard from './PostCard'
 
-import * as postsActions from '../../../actions/posts'
+import * as postsActions from 'actions/posts'
 
 import styles from './styles.module.scss'
 

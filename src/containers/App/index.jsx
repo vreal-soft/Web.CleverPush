@@ -1,15 +1,15 @@
 import React, { Component } from 'react'
 import { Router, Switch, Route } from 'react-router'
 import { Provider } from 'react-redux'
-import PrivateRoute from '../../components/PrivateRoute'
-import history from '../../utils/history'
+import PrivateRoute from 'components/PrivateRoute'
+import history from 'utils/history'
 
-import AppLoading from '../../components/AppLoading'
+import AppLoading from 'components/AppLoading'
 import Public from '../Public'
 import Admin from '../Admin'
 
-import store from '../../store'
-import * as userActions from '../../actions/users'
+import store from 'store'
+import * as userActions from 'actions/users'
 
 class App extends Component {
   state = {

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Select, Icon, Button, Alert, message, notification } from 'antd'
 import { connect } from 'react-redux'
 
-import * as usersActions from '../../../actions/users'
+import * as usersActions from 'actions/users'
 
 import styles from './styles.module.scss'
 
@@ -41,6 +41,10 @@ class Login extends Component {
   }
 
   onClickSignIn = () => {
+    if (!this.state.userId) {
+      return message.info(`Please, select user`, 3)
+    }
+
     const user = this.props.users.find(user => user.id === this.state.userId)
 
     usersActions.setUser(user)

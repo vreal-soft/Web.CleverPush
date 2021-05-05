@@ -1,19 +1,13 @@
 import React, { useRef } from 'react'
 import { Table, Ref } from 'semantic-ui-react'
 import { useDrag, useDrop } from 'react-dnd'
+import { IItem } from '../../../models/table'
 
-interface Item {
-  id: string
-  firstName: string
-  lastName: string
-  index: number
-  moveCard(dragIndex: number, hoverIndex: number): void
-}
-
-const TableRow = ({ id, firstName, lastName, index, moveCard }: Item) => {
+const TableRow = ({ id, firstName, lastName, index, moveCard }: IItem) => {
   const ref = useRef<any>(null)
+
   const [{ handlerId }, drop] = useDrop({
-    accept: 'CARD',
+    accept: 'USER_ITEM',
     collect(monitor) {
       return {
         handlerId: monitor.getHandlerId(),
@@ -44,9 +38,10 @@ const TableRow = ({ id, firstName, lastName, index, moveCard }: Item) => {
       }
     },
   })
+
   const [{ isDragging }, drag] = useDrag({
     item: {
-      type: 'CARD',
+      type: 'USER_ITEM',
       index: index,
       id: id,
     },

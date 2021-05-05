@@ -1,16 +1,14 @@
 import React, { useRef } from 'react'
 import { Table, Ref } from 'semantic-ui-react'
 import { useDrag, useDrop } from 'react-dnd'
+import { IUser } from '../../models/users'
 
-interface Item {
-  id: string
-  firstName: string
-  lastName: string
+interface Item extends IUser {
   index: number
   moveCard(dragIndex: number, hoverIndex: number): void
 }
 
-const TableRow = ({ id, firstName, lastName, index, moveCard }: Item) => {
+const TableRow = ({ id, first_name, last_name, email, index, moveCard }: Item) => {
   const ref = useRef<any>(null)
   const [{ handlerId }, drop] = useDrop({
     accept: 'CARD',
@@ -59,9 +57,10 @@ const TableRow = ({ id, firstName, lastName, index, moveCard }: Item) => {
   drag(drop(ref))
   return (
     <Ref innerRef={ref}>
-      <Table.Row key={firstName} style={{ opacity }} data-handler-id={handlerId}>
-        <Table.Cell>{firstName}</Table.Cell>
-        <Table.Cell>{lastName}</Table.Cell>
+      <Table.Row style={{ opacity }} data-handler-id={handlerId}>
+        <Table.Cell>{first_name}</Table.Cell>
+        <Table.Cell>{last_name}</Table.Cell>
+        <Table.Cell>{email}</Table.Cell>
       </Table.Row>
     </Ref>
   )
